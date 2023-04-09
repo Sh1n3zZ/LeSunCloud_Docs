@@ -6,6 +6,11 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
+import './css/bootstrap.min.css';
+import './css/icofont.min.css" rel="stylesheet';
+import './css/owl.carousel.min.css" rel="stylesheet';
+import './css/boxicons.min.css" rel="stylesheet';
+import './css/venobox.css" rel="stylesheet';
 //import classNames from './style.css';
 
 function HomepageHeader() {
