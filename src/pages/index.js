@@ -7,10 +7,10 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 import './css/bootstrap.min.css';
-import './css/icofont.min.css" rel="stylesheet';
-import './css/owl.carousel.min.css" rel="stylesheet';
-import './css/boxicons.min.css" rel="stylesheet';
-import './css/venobox.css" rel="stylesheet';
+import './css/icofont.min.css';
+import './css/owl.carousel.min.css';
+import './css/boxicons.min.css';
+import './css/venobox.css';
 //import classNames from './style.css';
 
 function HomepageHeader() {
