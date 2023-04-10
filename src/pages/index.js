@@ -12,6 +12,10 @@ import './css/bootstrap.min.css';
 import './css/boxicons.min.css';
 import './css/venobox.css';
 import './index.style.css';
+import './js/jquery.min.js';
+import './js/jquery.easing.min.js';
+import './js/jquery.waypoints.min.js';
+
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
