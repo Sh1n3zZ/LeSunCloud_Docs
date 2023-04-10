@@ -14,8 +14,6 @@ import './css/venobox.css';
 import './index.style.css';
 import './css/font_954744_g42joo6uzdr.css';
 import './css/font_2334619_bg75usmacm.css';
-import logo from './icon.png';
-
 
 
 function HomepageHeader() {
@@ -27,7 +25,7 @@ function HomepageHeader() {
     <div class="container" >
      <h1>
      <a href="https://lesun.cloud/" class="mr-auto">
-     <img src={logo} alt="logo" className="icon" /> 晞云云计算</a>
+     <img src="https://zzcdn.uerr.cn/cloudreve/uploads/2023/02/10/BAAJvpal_yuncuncu.png" alt="" class="img-fluid" styles={{ styles.height = 80px; }} /> 晞云云计算</a>
      </h1>
       <h2>保持热爱，共赴山海 .</h2>
       <h2>
