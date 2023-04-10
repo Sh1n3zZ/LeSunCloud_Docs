@@ -25,7 +25,7 @@ function HomepageHeader() {
     <div class="container" >
      <h1>
      <a href="https://lesun.cloud/" class="mr-auto">
-     <img src="https://zzcdn.uerr.cn/cloudreve/uploads/2023/02/10/BAAJvpal_yuncuncu.png" alt="" class="img-fluid" styles={{ styles.height = 80px; }} /> 晞云云计算</a>
+     <img src="https://zzcdn.uerr.cn/cloudreve/uploads/2023/02/10/BAAJvpal_yuncuncu.png" alt="" class="img-fluid" style={{ height: "100px" }} /> 晞云云计算</a>
      </h1>
       <h2>保持热爱，共赴山海 .</h2>
       <h2>
