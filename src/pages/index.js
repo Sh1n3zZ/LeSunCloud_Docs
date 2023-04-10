@@ -11,7 +11,7 @@ import './css/bootstrap.min.css';
 //import './css/owl.carousel.min.css';
 //import './css/boxicons.min.css';
 import './css/venobox.css';
-//import classNames from './style.css';
+import './index.style.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
