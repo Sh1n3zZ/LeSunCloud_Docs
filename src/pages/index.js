@@ -9,11 +9,11 @@ import styles from './index.module.css';
 import './css/bootstrap.min.css';
 import './css/icofont.min.css';
 import './css/boxicons.min.css';
+import './css/wiki.css';
 import './css/venobox.css';
 import './index.style.css';
-import './js/jquery.min.js';
-import './js/jquery.easing.min.js';
-import './js/jquery.waypoints.min.js';
+import 'https://at.alicdn.com/t/font_954744_g42joo6uzdr.css';
+import 'https://at.alicdn.com/t/font_2334619_bg75usmacm.css';
 
 
 function HomepageHeader() {
