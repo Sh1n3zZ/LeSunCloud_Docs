@@ -28,7 +28,7 @@ function HomepageHeader() {
      </h1>
       <h2>保持热爱，共赴山海 .</h2>
       <h2>
-        <a class="sns-xcx" href="/docs">
+        <a class="sns-xcx" href="/docs/ProductIntroduction">
         <i class="zm iconfont icon-link"></i>
         查看文档</a>
       </h2>
