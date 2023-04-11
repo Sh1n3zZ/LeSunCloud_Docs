@@ -24,7 +24,7 @@ function HomepageHeader() {
     <div class="container" >
      <h1>
      <a href="https://lesun.cloud/" class="mr-auto">
-     <img src="https://zzcdn.uerr.cn/cloudreve/uploads/2023/02/10/BAAJvpal_yuncuncu.png" alt="" class="img-fluid" styles={{ styles.height = 80px; }} /> 晞云云计算</a>
+     <img src="https://zzcdn.uerr.cn/cloudreve/uploads/2023/02/10/BAAJvpal_yuncuncu.png" alt="" class="img-fluid" style={{ height: "80px" }} /> 晞云云计算</a>
      </h1>
       <h2>保持热爱，共赴山海 .</h2>
       <h2>
@@ -35,7 +35,7 @@ function HomepageHeader() {
       <div id="page-info" className="display:block">
             <p id="bginfo" class="d-lg-block">Music ID <a href="https://music.163.com/#/playlist?id=8287113265" target="_blank">8287113265</a>
             <br />
-            Survival Time 
+            Design By <a href="https://shinezz.cc">Sh1n3zZ</a>
             <a><span id="sitetime"></span></a><br />
             Filing Mumber <a href="https://beian.miit.gov.cn/">粤ICP备2023028108号-1</a>
             </p>
