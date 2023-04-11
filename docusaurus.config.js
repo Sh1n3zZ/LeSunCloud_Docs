@@ -77,12 +77,6 @@ const config = {
             label: '产品介绍',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: '产品介绍',
-          },
-          {
             href: 'https://github.com/Sh1n3zZ',
             label: 'GitHub',
             position: 'right',
@@ -96,8 +90,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: '产品介绍',
+                to: '/docs/ProductIntroduction',
               },
             ],
           },
