@@ -1,6 +1,14 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import './css/bootstrap.min.css';
+//import './css/icofont.min.css';
+import './css/boxicons.min.css';
+import './css/wiki.css';
+import './css/venobox.css';
+import './index.style.css';
+import './css/font_954744_g42joo6uzdr.css';
+import './css/font_2334619_bg75usmacm.css';
 
 const FeatureList = [
   {
