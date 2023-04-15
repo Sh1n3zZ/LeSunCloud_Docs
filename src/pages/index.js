@@ -8,11 +8,9 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import styles from './index.module.css';
 
 import stylebootstrap from './css/bootstrap.min.module.css';
-import styleboxicons from './css/boxicons.min.module.css';
 import stylefont1 from './css/font1.module.css';
 import stylefont2 from './css/font2.module.css';
 import stylemainstyle from './mainstyle.module.css';
-import stylevenobox from './css/venobox.module.css';
 import styleDvemeS4Ever from './css/wiki.module.css';
 
 function HomepageHeader() {
