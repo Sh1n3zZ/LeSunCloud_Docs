@@ -7,6 +7,14 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 
+import style from './bootstrap.min.module.css';
+import style from './css/boxicons.min.module.css';
+import style from './font1.module.css';
+import style from './font2.module.css';
+import style from './mainstyle.module.css';
+import style from './venobox.module.css';
+import style from './wiki.module.css'
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
