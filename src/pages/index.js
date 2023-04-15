@@ -10,7 +10,7 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header id="header" class="header-tops" className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header id="header" class="header-tops" className="overflow-y:hidden;overflow-x: hidden;">
     <link href="./index.style.css" rel="classNamesheet" />
     <div class="kratos-overlay"><div class="filter"></div><canvas id="canvas" width="1920" height="939"></canvas></div>
     <div class="container" >
@@ -41,7 +41,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Main`}
+      title={`Home`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
     </Layout>
