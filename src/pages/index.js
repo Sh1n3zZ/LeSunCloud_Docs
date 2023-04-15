@@ -10,18 +10,29 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
+    <header id="header" class="header-tops" className={clsx('hero hero--primary', styles.heroBanner)}>
+    <link href="./index.style.css" rel="classNamesheet" />
+    <div class="kratos-overlay"><div class="filter"></div><canvas id="canvas" width="1920" height="939"></canvas></div>
+    <div class="container" >
+     <h1>
+     <a href="https://lesun.cloud/" class="mr-auto">
+     <img src="https://zzcdn.uerr.cn/cloudreve/uploads/2023/02/10/BAAJvpal_yuncuncu.png" alt="" class="img-fluid" style={{ height: "80px" }} /> 晞云云计算</a>
+     </h1>
+      <h2>保持热爱，共赴山海 .</h2>
+      <h2>
+        <a class="sns-xcx" href="/docs/ProductIntroduction">
+        <i class="zm iconfont icon-link"></i>
+        查看文档</a>
+      </h2>
+      <div id="page-info" className="display:block">
+            <p id="bginfo" class="d-lg-block">Music ID <a href="https://music.163.com/#/playlist?id=8287113265" target="_blank">8287113265</a>
+            <br />
+            Design By <a href="https://shinezz.cc">Sh1n3zZ</a>
+            <a><span id="sitetime"></span></a><br />
+            Filing Mumber <a href="https://beian.miit.gov.cn/">粤ICP备2023028108号-1</a>
+            </p>
         </div>
-      </div>
+    </div>
     </header>
   );
 }
@@ -30,12 +41,9 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`Main`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
     </Layout>
   );
 }
