@@ -16,7 +16,7 @@ import styleDvemeS4Ever from './css/wiki.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header id="header" className={stylemainstyle.header-tops} style="overflow-y:hidden;overflow-x: hidden;">
+    <header id="header" className={stylemainstyle.header-tops} style={{ overflowY: 'hidden', overflowX: 'hidden' }}>
     <div className={styleDvemeS4Ever.kratos-overlay}><div className={styleDvemeS4Ever.filter}></div><canvas id="canvas" width="1920" height="939"></canvas></div>
     <div className={stylemainstyle.container}>
      <h1>
@@ -29,7 +29,7 @@ function HomepageHeader() {
         <i className={`${stylefont1.zm} ${stylefont2.iconfont} ${stylefont2.icon-link}`}></i>
         查看文档</a>
       </h2>
-      <div id="page-info" style="display:block">
+      <div id="page-info" style={{ display: 'block' }}>
             <p id="bginfo" className={stylebootstrap.d-lg-block}>Music ID <a href="https://music.163.com/#/playlist?id=8287113265" target="_blank">8287113265</a>
             <br />
             Design By <a href="https://shinezz.cc">Sh1n3zZ</a>
