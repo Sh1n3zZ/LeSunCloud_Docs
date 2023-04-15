@@ -28,7 +28,7 @@ function HomepageHeader() {
       <h2>保持热爱，共赴山海 .</h2>
       <h2>
         <a className={styleDvemeS4Ever.sns-xcx} href="/docs/ProductIntroduction">
-        <i className={stylefont1.zm iconfont icon-link}></i>
+        <i className={`${stylefont1.zm} ${stylefont2.iconfont} ${stylefont2.icon-link}`}></i>
         查看文档</a>
       </h2>
       <div id="page-info" style="display:block">
