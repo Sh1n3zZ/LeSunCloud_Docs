@@ -10,8 +10,7 @@ import './css/font_2334619_bg75usmacm.css';
 
 export default function HomepageFeatures() {
     return (
-        <header id="header" class="header-tops" className="overflow-y:hidden;overflow-x: hidden;" className={clsx('hero hero--primary', styles.heroBanner)}>
-        <link href="./index.style.css" rel="classNamesheet" />
+        <section>
         <div class="kratos-overlay"><div class="filter"></div><canvas id="canvas" width="1920" height="939"></canvas></div>
         <div class="container" >
          <h1>
@@ -33,6 +32,6 @@ export default function HomepageFeatures() {
                 </p>
             </div>
         </div>
-    </header>
+        </section>
     );
 }
