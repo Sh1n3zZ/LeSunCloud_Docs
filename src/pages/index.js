@@ -7,33 +7,32 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 
-import style from './bootstrap.min.module.css';
-import style from './css/boxicons.min.module.css';
-import style from './font1.module.css';
-import style from './font2.module.css';
-import style from './mainstyle.module.css';
-import style from './venobox.module.css';
-import style from './wiki.module.css'
+import stylebootstrap from './css/bootstrap.min.module.css';
+import styleboxicons from './css/boxicons.min.module.css';
+import stylefont1 from './css/font1.module.css';
+import stylefont2 from './css/font2.module.css';
+import stylemainstyle from './mainstyle.module.css';
+import stylevenobox from './css/venobox.module.css';
+import styleDvemeS4Ever from './css/wiki.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header id="header" class="header-tops" className="overflow-y:hidden;overflow-x: hidden;">
-    <link href="./index.style.css" rel="classNamesheet" />
-    <div class="kratos-overlay"><div class="filter"></div><canvas id="canvas" width="1920" height="939"></canvas></div>
-    <div class="container" >
+    <header id="header" className={stylemainstyle.header-tops} style="overflow-y:hidden;overflow-x: hidden;">
+    <div className={styleDvemeS4Ever.kratos-overlay}><div className={styleDvemeS4Ever.filter}></div><canvas id="canvas" width="1920" height="939"></canvas></div>
+    <div className={stylemainstyle.container}>
      <h1>
-     <a href="https://lesun.cloud/" class="mr-auto">
-     <img src="https://zzcdn.uerr.cn/cloudreve/uploads/2023/02/10/BAAJvpal_yuncuncu.png" alt="" class="img-fluid" style={{ height: "80px" }} /> 晞云云计算</a>
+     <a href="https://lesun.cloud/" className={stylebootstrap.mr-auto}>
+     <img src="https://zzcdn.uerr.cn/cloudreve/uploads/2023/02/10/BAAJvpal_yuncuncu.png" alt="" className={stylebootstrap.img-fluid} style={{ height: "80px" }} /> 晞云云计算</a>
      </h1>
       <h2>保持热爱，共赴山海 .</h2>
       <h2>
-        <a class="sns-xcx" href="/docs/ProductIntroduction">
-        <i class="zm iconfont icon-link"></i>
+        <a className={styleDvemeS4Ever.sns-xcx} href="/docs/ProductIntroduction">
+        <i className={stylefont1.zm iconfont icon-link}></i>
         查看文档</a>
       </h2>
-      <div id="page-info" className="display:block">
-            <p id="bginfo" class="d-lg-block">Music ID <a href="https://music.163.com/#/playlist?id=8287113265" target="_blank">8287113265</a>
+      <div id="page-info" style="display:block">
+            <p id="bginfo" className={stylebootstrap.d-lg-block}>Music ID <a href="https://music.163.com/#/playlist?id=8287113265" target="_blank">8287113265</a>
             <br />
             Design By <a href="https://shinezz.cc">Sh1n3zZ</a>
             <a><span id="sitetime"></span></a><br />
