@@ -16,7 +16,7 @@ import styleDvemeS4Ever from './css/wiki.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header id="header" className={stylemainstyle.header.header-tops} style={{ overflowY: 'hidden', overflowX: 'hidden' }}>
+    <header id="header" className={stylemainstyle.header.header-top} style={{ overflowY: 'hidden', overflowX: 'hidden' }}>
     <div className={styleDvemeS4Ever.kratos-overlay}><div className={styleDvemeS4Ever.filter}></div><canvas id="canvas" width="1920" height="939"></canvas></div>
     <div className={stylemainstyle.container}>
      <h1>
