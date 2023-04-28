@@ -1,7 +1,7 @@
 {
     "extends": "./tsconfig.build.json",
     "compilerOptions": {
-        "baseUrl": ".",
+        "baseUrl": "/",
         "paths": {
             "crawlee": ["packages/crawlee/src"],
             "@crawlee/basic": ["packages/basic-crawler/src"],
