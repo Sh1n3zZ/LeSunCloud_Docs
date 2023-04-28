@@ -1,286 +1,456 @@
-/* eslint-disable global-require,import/no-extraneous-dependencies */
-const { externalLinkProcessor } = require('./tools/utils/externalLink');
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
 
-const packages = [
-    'core',
-    'browser-pool',
-    'basic-crawler',
-    'browser-crawler',
-    'http-crawler',
-    'cheerio-crawler',
-    'puppeteer-crawler',
-    'playwright-crawler',
-    'jsdom-crawler',
-    'memory-storage',
-    'utils',
-    'types',
-];
-const packagesOrder = [
-    '@crawlee/core',
-    '@crawlee/cheerio',
-    '@crawlee/jsdom',
-    '@crawlee/playwright',
-    '@crawlee/puppeteer',
-    '@crawlee/basic',
-    '@crawlee/http',
-    '@crawlee/browser',
-    '@crawlee/memory-storage',
-    '@crawlee/browser-pool',
-    '@crawlee/utils',
-    '@crawlee/types',
-];
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
-/** @type {Partial<import('@docusaurus/types').DocusaurusConfig>} */
-module.exports = {
-    title: 'Crawlee',
-    tagline: 'Build reliable crawlers. Fast.',
-    url: 'https://crawlee.dev',
-    baseUrl: '/',
-    trailingSlash: false,
-    organizationName: 'apify',
-    projectName: 'crawlee',
-    scripts: ['/js/custom.js'],
-    favicon: 'img/favicon.ico',
-    customFields: {
-        markdownOptions: {
-            html: true,
-        },
-        gaGtag: true,
-        repoUrl: 'https://github.com/apify/crawlee',
-    },
-    onBrokenLinks:
-    /** @type {import('@docusaurus/types').ReportingSeverity} */ ('throw'),
-    onBrokenMarkdownLinks:
-    /** @type {import('@docusaurus/types').ReportingSeverity} */ ('throw'),
-    presets: /** @type {import('@docusaurus/types').PresetConfig[]} */ ([
-        [
-            '@docusaurus/preset-classic',
-            /** @type {import('@docusaurus/preset-classic').Options} */
-            ({
-                docs: {
-                    showLastUpdateAuthor: true,
-                    showLastUpdateTime: true,
-                    path: './docs',
-                    sidebarPath: './sidebars.js',
-                    rehypePlugins: [externalLinkProcessor],
-                },
-                theme: {
-                    customCss: '/src/css/custom.css',
-                },
-            }),
-        ],
-    ]),
-    plugins: [
-        [
-            'docusaurus-plugin-typedoc-api',
-            {
-                projectRoot: `${__dirname}`,
-                changelogs: true,
-                readmes: true,
-                sortPackages: (a, b) => {
-                    return packagesOrder.indexOf(a.packageName) - packagesOrder.indexOf(b.packageName);
-                },
-                packages: packages.map((name) => ({ path: `packages/${name}` })),
-                typedocOptions: {
-                    excludeExternals: false,
-                },
-            },
-        ],
-        [
-            '@docusaurus/plugin-client-redirects',
-            {
-                redirects: [
-                    {
-                        from: '/docs',
-                        to: '/docs/quick-start',
-                    },
-                    {
-                        from: '/docs/next',
-                        to: '/docs/next/quick-start',
-                    },
-                    {
-                        from: '/docs/guides/environment-variables',
-                        to: '/docs/guides/configuration',
-                    },
-                    {
-                        from: '/docs/guides/getting-started',
-                        to: '/docs/introduction',
-                    },
-                ],
-                createRedirects(existingPath) {
-                    if (!existingPath.endsWith('/')) {
-                        return `${existingPath}/`;
-                    }
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  title: "7Wate",
+  tagline: "For Freedom",
+  url: "https://wiki.7wate.com",
+  baseUrl: "/",
+  onBrokenLinks: "log",
+  onBrokenMarkdownLinks: "log",
+  favicon: "img/favicon.ico",
 
-                    return undefined; // Return a falsy value: no redirect created
-                },
-            },
-        ],
-        [
-            'docusaurus-gtm-plugin',
-            {
-                id: 'GTM-5P7MCS7',
-            },
-        ],
-    ],
-    themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */ ({
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  // organizationName: '7wate', // Usually your GitHub org/user name.
+  // projectName: 'wiki', // Usually your repo name.
+
+  // Even if you don't use internalization, you can use this field to set useful
+  // metadata like html lang. For example, if your site is Chinese, you may want
+  // to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: "zh-Hans",
+    locales: ["zh-Hans"],
+  },
+
+  presets: [
+    [
+      "classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         docs: {
-            versionPersistence: 'localStorage',
-            sidebar: {
-                hideable: true,
-            },
+          sidebarPath: require.resolve("./sidebars.js"),
+          editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          breadcrumbs: false,
         },
-        navbar: {
-            hideOnScroll: true,
-            title: 'Crawlee',
-            logo: {
-                src: 'img/crawlee-light.svg',
-                srcDark: 'img/crawlee-dark.svg',
-            },
+        blog: {
+          blogTitle: "7Wate`s Blog",
+          blogDescription: "7Wate 的个人生活和工作记录",
+          blogSidebarCount: 7,
+          blogSidebarTitle: "近期文章",
+          showReadingTime: true,
+          editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+          feedOptions: {
+            title: "7Wate`s Blog",
+            description: "7Wate 的个人生活和工作记录",
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} 7Wate, Inc.`,
+          },
+        },
+        theme: {
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+        sitemap: {
+          changefreq: "weekly",
+          priority: 0.5,
+          filename: 'sitemap.xml',
+        },
+        googleAnalytics: {
+          trackingID: "G-MHMEL0F832",
+          anonymizeIP: true,
+        },
+        gtag: {
+          trackingID: 'G-MHMEL0F832',
+          anonymizeIP: true,
+        },
+      }),
+    ],
+  ],
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "getting-started",
+        path: "wiki/getting-started",
+        routeBasePath: "getting-started",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "programming-language",
+        path: "wiki/programming-language",
+        routeBasePath: "programming-language",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "structures-algorithms",
+        path: "wiki/structures-algorithms",
+        routeBasePath: "structures-algorithms",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "computer-composition",
+        path: "wiki/computer-composition",
+        routeBasePath: "computer-composition",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "computer-network",
+        path: "wiki/computer-network",
+        routeBasePath: "computer-network",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "operating-system",
+        path: "wiki/operating-system",
+        routeBasePath: "operating-system",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "database-system",
+        path: "wiki/database-system",
+        routeBasePath: "database-system",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "computer-security",
+        path: "wiki/computer-security",
+        routeBasePath: "computer-security",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "software-engineering",
+        path: "wiki/software-engineering",
+        routeBasePath: "software-engineering",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "compilation-principle",
+        path: "wiki/compilation-principle",
+        routeBasePath: "compilation-principle",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+// -----------------------------------------------------------------------------------
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "org",
+        path: "group/organization",
+        routeBasePath: "org",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "com",
+        path: "group/company",
+        routeBasePath: "com",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "gov",
+        path: "group/government",
+        routeBasePath: "gov",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+// -----------------------------------------------------------------------------------
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "roadmap",
+        path: "work/roadmap",
+        routeBasePath: "roadmap",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "devops",
+        path: "work/devops",
+        routeBasePath: "devops",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "devsec",
+        path: "work/devsec",
+        routeBasePath: "devsec",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+// -----------------------------------------------------------------------------------
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "life",
+        path: "life",
+        routeBasePath: "life",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+// -----------------------------------------------------------------------------------
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "journal",
+        path: "journal",
+        routeBasePath: "journal",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://git.7wate.com/zhouzhongping/wiki/src/branch/master",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: false,
+      },
+    ],
+
+    "docusaurus-plugin-umami",
+  ],
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      // announcementBar: {
+      //   id: 'support_us',
+      //   content:
+      //     'Always For Freedom. The site by 7Wate.',
+      //   backgroundColor: '#fafbfc',
+      //   textColor: '#091E42',
+      //   isCloseable: false,
+      // },
+      metadata: [
+        {
+          name: "keywords",
+          content: "7wate, wiki, blog, c, c++, java, python, linux",
+        },
+      ],
+      navbar: {
+        title: "📚 7Wate's Wiki",
+        hideOnScroll: true,
+        // logo: {
+        //   alt: 'Site Logo',
+        //   src: 'img/logo.svg',
+        //   srcDark: 'img/logo_dark.svg',
+        //   href: 'https://docusaurus.io/',
+        //   target: '_self',
+        //   width: 32,
+        //   height: 32,
+        // },
+        items: [
+          { to: "/blog", label: "👨🏻‍🌾 博客", position: "right" },
+          {
+            position: "right",
+            label: "👨🏻‍🎓 维基",
             items: [
-                {
-                    type: 'doc',
-                    docId: 'quick-start/quick-start',
-                    label: 'Docs',
-                    position: 'left',
-                },
-                {
-                    type: 'doc',
-                    docId: '/examples',
-                    label: 'Examples',
-                    position: 'left',
-                },
-                {
-                    type: 'custom-api',
-                    to: 'core',
-                    label: 'API',
-                    position: 'left',
-                    activeBaseRegex: 'api/(?!.*/changelog)',
-                },
-                {
-                    type: 'custom-api',
-                    to: 'core/changelog',
-                    label: 'Changelog',
-                    position: 'left',
-                    className: 'changelog',
-                    activeBaseRegex: 'changelog',
-                },
-                {
-                    type: 'docsVersionDropdown',
-                    position: 'left',
-                    dropdownItemsAfter: [
-                        {
-                            href: 'https://sdk.apify.com/docs/guides/getting-started',
-                            label: '2.2',
-                        },
-                        {
-                            href: 'https://sdk.apify.com/docs/1.3.1/guides/getting-started',
-                            label: '1.3',
-                        },
-                    ],
-                },
-                {
-                    href: 'https://github.com/apify/crawlee',
-                    label: 'GitHub',
-                    title: 'View on GitHub',
-                    position: 'right',
-                    className: 'icon',
-                },
-                {
-                    href: 'https://discord.com/invite/jyEM2PRvMU',
-                    label: 'Discord',
-                    title: 'Chat on Discord',
-                    position: 'right',
-                    className: 'icon',
-                },
+              {
+                label: "基础入门",
+                to: "/getting-started",
+              },
+              {
+                label: "程序设计语言",
+                to: "/programming-language",
+              },
+              {
+                label: "数据结构与算法",
+                to: "/structures-algorithms",
+              },
+              {
+                label: "计算机组成",
+                to: "/computer-composition",
+              },
+              {
+                label: "计算机网络",
+                to: "/computer-network",
+              },
+              {
+                label: "操作系统",
+                to: "/operating-system",
+              },
+              {
+                label: "数据库系统",
+                to: "/database-system",
+              },
+              {
+                label: "计算机系统安全",
+                to: "/computer-security",
+              },
+              {
+                label: "软件工程",
+                to: "/software-engineering",
+              },       
+              {
+                label: "编译原理",
+                to: "/compilation-principle",
+              },
             ],
-        },
-        colorMode: {
-            defaultMode: 'light',
-            disableSwitch: false,
-            respectPrefersColorScheme: true,
-        },
-        prism: {
-            defaultLanguage: 'typescript',
-            theme: require('prism-react-renderer/themes/github'),
-            darkTheme: require('prism-react-renderer/themes/dracula'),
-            additionalLanguages: ['docker', 'log'],
-        },
-        metadata: [],
-        image: 'img/crawlee-og.png',
-        footer: {
-            links: [
-                {
-                    title: 'Docs',
-                    items: [
-                        {
-                            label: 'Guides',
-                            to: 'docs/guides',
-                        },
-                        {
-                            label: 'Examples',
-                            to: 'docs/examples',
-                        },
-                        {
-                            label: 'API reference',
-                            to: 'api/core',
-                        },
-                        {
-                            label: 'Upgrading to v3',
-                            to: 'docs/upgrading/upgrading-to-v3',
-                        },
-                    ],
-                },
-                {
-                    title: 'Community',
-                    items: [
-                        {
-                            label: 'Discord',
-                            href: 'https://discord.com/invite/jyEM2PRvMU',
-                        },
-                        {
-                            label: 'Stack Overflow',
-                            href: 'https://stackoverflow.com/questions/tagged/crawlee',
-                        },
-                        {
-                            label: 'Twitter',
-                            href: 'https://twitter.com/apify',
-                        },
-                    ],
-                },
-                {
-                    title: 'More',
-                    items: [
-                        {
-                            label: 'Apify Platform',
-                            href: 'https://apify.com',
-                        },
-                        {
-                            label: 'Docusaurus',
-                            href: 'https://docusaurus.io',
-                        },
-                        {
-                            label: 'GitHub',
-                            href: 'https://github.com/apify/crawlee',
-                        },
-                    ],
-                },
-            ],
-            logo: {
-                src: 'img/apify_logo.svg',
-                href: '/',
-                width: '60px',
-                height: '60px',
-            },
-        },
-        algolia: {
-            appId: '5JC94MPMLY',
-            apiKey: '267679200b833c2ca1255ab276731869', // search only (public) API key
-            indexName: 'crawlee',
-            algoliaOptions: {
-                facetFilters: ['version:VERSION'],
-            },
-        },
+          },
+          {
+            position: "right",
+            label: "👨‍💻 职业",
+            items: [
+              {
+                label: "求职之路",
+                to: "/roadmap",
+              },
+              {
+                label: "运维开发工程师",
+                to: "/devops",
+              },
+              {
+                label: "信息安全工程师",
+                to: "/devsec",
+              },
+            ]
+          },
+          {
+            position: "right",
+            label: "💼 组织",
+            items: [
+              {
+                label: "自由社区",
+                to: "/org",
+              },
+              {
+                label: "现代企业",
+                to: "/com",
+              },
+              {
+                label: "国家政府",
+                to: "/gov",
+              },
+            ]
+          },
+          { to: "/life", label: "🚴🏻‍♀️ 生活", position: "right" },
+          { to: "/journal", label: "📽️ 日志", position: "right" },
+        ],
+      },
+      algolia: {
+        apiKey: "5d5a02bdf02df700355c8ccd84b78d13",
+        appId: "8W3YJXJGF2",
+        indexName: "wiki",
+      },
+      umami: {
+        websiteid: "7efcd733-c232-43db-9f17-10a00c53b152",
+        src: "https://umami.7wate.org/umami.js",
+      },
+      footer: {
+        style: "dark",
+        copyright: `Copyright © ${new Date().getFullYear()} 7Wate, Inc. Built with <a href="https://www.docusaurus.cn/" target="_blank" rel="noopener noreferrer">Docusaurus</a>.<br>Powered by <a href="https://webify.cloudbase.net/" target="_blank" rel="noopener noreferrer">CloudBase Webify</a>`,
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+        defaultLanguage: "markdown",
+        additionalLanguages: ["java", "git","nginx","http"],
+      },
     }),
 };
+
+module.exports = config;
