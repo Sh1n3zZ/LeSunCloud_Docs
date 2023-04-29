@@ -18,13 +18,13 @@ const svgList = [
   {
     title: 'bilibili',
     Svg: require('../../static/img/bilibili.svg').default,
-    link: 'https://space.bilibili.com/223211771',
+    link: 'https://space.bilibili.com/',
   },
   {
     title: 'wechat',
     Svg: require('../../static/img/wechat.svg').default,
     color: '#2979ff',
-    link: 'https://static.7wate.com/img/2022/06/16/d6dfd36f35293.jpg',
+    link: '#',
   },
 ]
 const Svg = ({ Svg, color, title, link }) => {
@@ -66,12 +66,12 @@ function MyHero() {
         </p>
         <div className={styles.buttonContainer}>
           <button className={styles.button}>
-            <a className={styles.hero_a} href='/'>
-              Click
+            <a className={styles.hero_a} href='/wiki'>
+              前往文档
             </a>
           </button>
           <span className={styles.buttonLeftText}>
-            Get Started. <br /> 开启学习之旅.
+            Get Started. <br /> 从这里前往文档.
           </span>
           <div className={styles.svgContainer}>
             {svgList.map((item, index) => {
