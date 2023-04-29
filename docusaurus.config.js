@@ -77,7 +77,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "getting-started",
-        path: "docs/getting-started",
+        path: "wiki/getting-started",
         routeBasePath: "getting-started",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -90,7 +90,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "programming-language",
-        path: "docs/programming-language",
+        path: "wiki/programming-language",
         routeBasePath: "programming-language",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -103,7 +103,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "structures-algorithms",
-        path: "docs/structures-algorithms",
+        path: "wiki/structures-algorithms",
         routeBasePath: "structures-algorithms",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -116,7 +116,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "computer-composition",
-        path: "docs/computer-composition",
+        path: "wiki/computer-composition",
         routeBasePath: "computer-composition",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -129,7 +129,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "computer-network",
-        path: "docs/computer-network",
+        path: "wiki/computer-network",
         routeBasePath: "computer-network",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -142,7 +142,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "operating-system",
-        path: "docs/operating-system",
+        path: "wiki/operating-system",
         routeBasePath: "operating-system",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -155,7 +155,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "database-system",
-        path: "docs/database-system",
+        path: "wiki/database-system",
         routeBasePath: "database-system",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -168,7 +168,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "computer-security",
-        path: "docs/computer-security",
+        path: "wiki/computer-security",
         routeBasePath: "computer-security",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -181,7 +181,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "software-engineering",
-        path: "docs/software-engineering",
+        path: "wiki/software-engineering",
         routeBasePath: "software-engineering",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -194,7 +194,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "compilation-principle",
-        path: "docs/compilation-principle",
+        path: "wiki/compilation-principle",
         routeBasePath: "compilation-principle",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
