@@ -77,7 +77,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "getting-started",
-        path: "wiki/getting-started",
+        path: "docs/getting-started",
         routeBasePath: "getting-started",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -90,7 +90,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "programming-language",
-        path: "wiki/programming-language",
+        path: "docs/programming-language",
         routeBasePath: "programming-language",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -103,7 +103,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "structures-algorithms",
-        path: "wiki/structures-algorithms",
+        path: "docs/structures-algorithms",
         routeBasePath: "structures-algorithms",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -116,7 +116,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "computer-composition",
-        path: "wiki/computer-composition",
+        path: "docs/computer-composition",
         routeBasePath: "computer-composition",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -129,7 +129,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "computer-network",
-        path: "wiki/computer-network",
+        path: "docs/computer-network",
         routeBasePath: "computer-network",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -142,7 +142,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "operating-system",
-        path: "wiki/operating-system",
+        path: "docs/operating-system",
         routeBasePath: "operating-system",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -155,7 +155,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "database-system",
-        path: "wiki/database-system",
+        path: "docs/database-system",
         routeBasePath: "database-system",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -168,7 +168,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "computer-security",
-        path: "wiki/computer-security",
+        path: "docs/computer-security",
         routeBasePath: "computer-security",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -181,7 +181,7 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "software-engineering",
-        path: "wiki/software-engineering",
+        path: "docs/software-engineering",
         routeBasePath: "software-engineering",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
@@ -194,48 +194,8 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "compilation-principle",
-        path: "wiki/compilation-principle",
+        path: "docs/compilation-principle",
         routeBasePath: "compilation-principle",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-// -----------------------------------------------------------------------------------
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "roadmap",
-        path: "work/roadmap",
-        routeBasePath: "roadmap",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "devops",
-        path: "work/devops",
-        routeBasePath: "devops",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "devsec",
-        path: "work/devsec",
-        routeBasePath: "devsec",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
         showLastUpdateAuthor: true,
@@ -322,44 +282,6 @@ const config = {
               },
             ],
           },
-          {
-            position: "right",
-            label: "👨‍💻 职业",
-            items: [
-              {
-                label: "求职之路",
-                to: "/roadmap",
-              },
-              {
-                label: "运维开发工程师",
-                to: "/devops",
-              },
-              {
-                label: "信息安全工程师",
-                to: "/devsec",
-              },
-            ]
-          },
-          {
-            position: "right",
-            label: "💼 组织",
-            items: [
-              {
-                label: "自由社区",
-                to: "/org",
-              },
-              {
-                label: "现代企业",
-                to: "/com",
-              },
-              {
-                label: "国家政府",
-                to: "/gov",
-              },
-            ]
-          },
-          { to: "/life", label: "🚴🏻‍♀️ 生活", position: "right" },
-          { to: "/journal", label: "📽️ 日志", position: "right" },
         ],
       },
       algolia: {
@@ -373,7 +295,7 @@ const config = {
       },
       footer: {
         style: "dark",
-        copyright: `Copyright © ${new Date().getFullYear()} 7Wate, Inc. Built with <a href="https://www.docusaurus.cn/" target="_blank" rel="noopener noreferrer">Docusaurus</a>.<br>Powered by <a href="https://webify.cloudbase.net/" target="_blank" rel="noopener noreferrer">CloudBase Webify</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://lesun.cloud">晞云</a> All Rights Reserved.<br><a href="https://beian.miit.gov.cn/">粤ICP备2023028108号-1</a>`,
       },
       prism: {
         theme: lightCodeTheme,

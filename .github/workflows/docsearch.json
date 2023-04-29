@@ -1,10 +1,10 @@
 {
-    "index_name": "wiki",
+    "index_name": "DocsSearch",
     "start_urls": [
-      "https://wiki.7wate.com/"
+      "https://docs.lesun.cloud/"
     ],
     "sitemap_urls": [
-      "https://wiki.7wate.com/sitemap.xml"
+      "https://docs.lesun.cloud/sitemap.xml"
     ],
     "stop_urls": [
       "/search",
