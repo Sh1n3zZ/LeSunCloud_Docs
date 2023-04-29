@@ -13,7 +13,7 @@ const svgList = [
     title: 'github',
     Svg: require('../../static/img/github.svg').default,
     color: 'black',
-    link: 'https://github.com/7Wate/wiki',
+    link: 'https://github.com/Sh1n3zZ',
   },
   {
     title: 'bilibili',
@@ -57,22 +57,22 @@ function MyHero() {
     <div className={styles.myHeroContainer}>
       <div className={styles.leftContainer}>
         <h1 className={styles.leftContainer_h1}>
-          Always <br /> For Freedom.
+          Per aspera <br /> ad astra.
         </h1>
         <p className={styles.leftContainer_p}>
-          一个喜欢异想天开的家伙 💨
+          保持热爱，共赴山海 💨
           <br />
           在这里记录知识，希望对你也有帮助。
         </p>
         <div className={styles.buttonContainer}>
-          {/* <button className={styles.button}>
+          <button className={styles.button}>
             <a className={styles.hero_a} href='/'>
               Click
             </a>
           </button>
           <span className={styles.buttonLeftText}>
             Get Started. <br /> 开启学习之旅.
-          </span> */}
+          </span>
           <div className={styles.svgContainer}>
             {svgList.map((item, index) => {
               return <Svg {...item} key={item.title} />
