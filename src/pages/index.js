@@ -15,6 +15,7 @@ const svgList = [
     color: 'black',
     link: 'https://github.com/Sh1n3zZ',
   },
+  {/*
   {
     title: 'bilibili',
     Svg: require('../../static/img/bilibili.svg').default,
@@ -26,6 +27,7 @@ const svgList = [
     color: '#2979ff',
     link: '#',
   },
+  */}
 ]
 const Svg = ({ Svg, color, title, link }) => {
   return (
