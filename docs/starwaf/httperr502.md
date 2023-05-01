@@ -13,12 +13,12 @@
 为 **快速、直接** 解决问题，您可以直接关闭您源站的防火墙，这可能会为您的源站带来安全风险，但 **由于使用 CDN 无法直接获取真实源站 ip** ，因此 **在源站 ip没有泄露的情况下您的源站仍然是安全的** 所以您可以通过关闭源站防火墙来解决回源被拦截  
 
 **如您是 CentOS 用户，请执行如下操作：**
-```ts
+```shell
 systemctl disable firewalld
 ```
 
 **如您是 Debian / Ubuntu 用户，请执行如下操作：**
-```ts
+```shell
 sudo ufw disable
 ```
 
@@ -33,26 +33,26 @@ sudo ufw disable
 **由于过程较为复杂，这里拿 CentOS 作为例子，其他系统请自行 Google 加白方法**
 
 1.将指定 ip 地址添加到防火墙白名单中：
-```ts
+```shell
 iptables -I INPUT -s <IP地址> -j ACCEPT
 ```
 
 2.保存防火墙规则
-```ts
+```shell
 service iptables save
 ```
 如您使用的是  **CentOS7 以上版本** ，则可以使用以下方式：
-```ts
+```shell
 iptables-save > /etc/sysconfig/iptables
 ```
 
 3.重载防火墙规则
-```ts
+```shell
 systemctl restart iptables
 ```
 
 **进阶：** 删除已添加的防火墙白名单 ip  
 将以上第一步内容替换为以下内容：
-```ts
+```shell
 iptables -D INPUT -s <IP地址> -j ACCEPT
 ```
