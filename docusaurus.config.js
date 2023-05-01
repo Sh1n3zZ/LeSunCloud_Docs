@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Akara',
-  tagline: 'Never Knows Best',
+  title: '⭐️晞云⭐️',
+  tagline: '保持热爱，共赴山海.',
   url: 'https://messiahhh.github.io/',
   baseUrl: '/', 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'messiahhh', // Usually your GitHub org/user name.
-  projectName: 'blog', // Usually your repo name.
+  organizationName: 'Sh1n3zZ', // Usually your GitHub org/user name.
+  projectName: 'LeSunCloud_Docs', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   plugins: ['@docusaurus/theme-live-codeblock'],
   i18n: {
@@ -29,13 +29,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/Sh1n3zZ/LeSunCloud_Docs/blob/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Sh1n3zZ/LeSunCloud_Docs/blob/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -60,7 +60,7 @@ const config = {
         isCloseable: true,
       }, 
       navbar: {
-        title: '晞 · Docs',
+        title: '✨ 晞 · Docs',
         hideOnScroll: true,
         items: [
           {
@@ -69,7 +69,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'HTML',
+            docId: 'docs',
             position: 'right',
             label: '正文',
           },
