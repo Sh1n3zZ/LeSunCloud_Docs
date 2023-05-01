@@ -29,7 +29,8 @@ const sidebars = {
         id: 'starwaf/basic',
       },
       items: [
-        'starwaf/basic'
+        'starwaf/basic',
+        'starwaf/httperr502'
       ],
     },
 
