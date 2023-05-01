@@ -19,6 +19,21 @@ const sidebars = {
     // "browser",
     "Start",
     "css",
+
+    // "Star · WAF",
+    {
+      type: 'category',
+      label: 'Star · WAF',
+      link: {
+        type: 'doc',
+        id: 'starwaf/basic',
+      },
+      items: [
+        'starwaf/basic'
+      ],
+    },
+
+    // "browser",
     {
       type: 'category',
       label: 'JavaScript',
