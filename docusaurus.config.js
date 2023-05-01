@@ -54,13 +54,13 @@ const config = {
       },
       announcementBar: {
         id: 'support_us',
-        content: '⭐️ 如果这个网站能帮助到你，欢迎给一个star支持作者  <a target="_blank" rel="noopener noreferrer" href="https://github.com/Messiahhh/blog">GitHub</a>',
+        content: '⭐️ 同时你也可以前往 <a target="_blank" rel="noopener noreferrer" href="https://github.com/Sh1n3zZ/LeSunCloud_Docs">GitHub</a> 给咱来一个 Star 噢 ヾ⁠(⁠･⁠ω⁠･⁠*⁠)⁠ﾉ',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: true,
       }, 
       navbar: {
-        title: 'Akara的博客',
+        title: '晞 · Docs',
         hideOnScroll: true,
         items: [
           {
