@@ -17,7 +17,7 @@ const sidebars = {
   tutorialSidebar: [
     
     // "browser",
-    "HTML",
+    "start",
     "css",
     {
       type: 'category',
