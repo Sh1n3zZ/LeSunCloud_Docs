@@ -22,12 +22,37 @@ systemctl disable firewalld
 sudo ufw disable
 ```
 
-**如您是 宝塔面板 用户，请执行如下操作：**
-1.在首页点击 **软件管理**
-2.在 **软件管理** 中选择 **你已经安装的系统防火墙软件**
+**如您是 宝塔面板 用户，请执行如下操作：**  
+1.在首页点击 **软件管理**  
+2.在 **软件管理** 中选择 **你已经安装的系统防火墙软件**  
 ![打开宝塔面板中的防火墙软件](https://zzcdn.uerr.cn/cloudreve/uploads/2023/05/01/oC90YbKF_ScreenShot1_Step1.png)
-3.在 **软件 - 管理** 中选择 **关闭防火墙**
+3.在 **软件 - 管理** 中选择 **关闭防火墙**  
 ![关闭防火墙](https://zzcdn.uerr.cn/cloudreve/uploads/2023/05/01/WPoqTSr7_QQ%E6%88%AA%E5%9B%BE20230501215153.png)
 
-### 给我们的 CDN 内容分发节点加白
-考虑到部分站长可能 **不希望自己的源站暴露** ，因此我们建议这类站长
+### 给我们的 CDN 节点加白
+**由于过程较为复杂，这里拿 CentOS 作为例子，其他系统请自行 Google 加白方法**
+
+1.将指定 ip 地址添加到防火墙白名单中：
+```ts
+iptables -I INPUT -s <IP地址> -j ACCEPT
+```
+
+2.保存防火墙规则
+```ts
+service iptables save
+```
+如您使用的是  **CentOS7 以上版本** ，则可以使用以下方式：
+```ts
+iptables-save > /etc/sysconfig/iptables
+```
+
+3.重载防火墙规则
+```ts
+systemctl restart iptables
+```
+
+**进阶：** 删除已添加的防火墙白名单 ip  
+将以上第一步内容替换为以下内容：
+```ts
+iptables -D INPUT -s <IP地址> -j ACCEPT
+```
