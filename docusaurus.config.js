@@ -69,7 +69,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'start',
+            docId: 'Start',
             position: 'right',
             label: '正文',
           },

@@ -1,7 +1,7 @@
 ---
 sidebarDepth: 4
 ---
-# Get Started Here
+# Start
 ## 关于我们
 
 ### 简介
