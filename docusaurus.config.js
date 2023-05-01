@@ -1,308 +1,104 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "晞 · Docs",
-  tagline: "-Per aspera ad astra.",
-  url: "https://docs.lesun.cloud",
-  baseUrl: "/",
-  onBrokenLinks: "log",
-  onBrokenMarkdownLinks: "log",
-  favicon: "img/favicon.ico",
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  // organizationName: '7wate', // Usually your GitHub org/user name.
-  // projectName: 'wiki', // Usually your repo name.
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  title: 'Akara',
+  tagline: 'Never Knows Best',
+  url: 'https://messiahhh.github.io/',
+  baseUrl: '/blog/', 
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/favicon.ico',
+  organizationName: 'messiahhh', // Usually your GitHub org/user name.
+  projectName: 'blog', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
+  plugins: ['@docusaurus/theme-live-codeblock'],
   i18n: {
-    defaultLocale: "zh-Hans",
-    locales: ["zh-Hans"],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
-
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
-          breadcrumbs: false,
+          sidebarPath: require.resolve('./sidebars.js'),
+          // Please change this to your repo.
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
-          blogTitle: "晞 · Docs",
-          blogDescription: "晞云云计算产品文档 - Docs For LeSunCloud",
-          blogSidebarCount: 7,
-          blogSidebarTitle: "近期文章",
           showReadingTime: true,
-          editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-          feedOptions: {
-            title: "晞 · Docs",
-            description: "晞云云计算产品文档 - Docs For LeSunCloud",
-            type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} <a href="https://lesun.cloud">晞云</a> All Rights Reserved.<br><a href="https://beian.miit.gov.cn/">粤ICP备2023028108号-1</a>`,
-          },
+          // Please change this to your repo.
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
-        },
-        sitemap: {
-          changefreq: "weekly",
-          priority: 0.5,
-          filename: 'sitemap.xml',
-        },
-        googleAnalytics: {
-          trackingID: "G-MHMEL0F832",
-          anonymizeIP: true,
-        },
-        gtag: {
-          trackingID: 'G-MHMEL0F832',
-          anonymizeIP: true,
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
   ],
-  plugins: [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "getting-started",
-        path: "wiki/getting-started",
-        routeBasePath: "getting-started",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "programming-language",
-        path: "wiki/programming-language",
-        routeBasePath: "programming-language",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "structures-algorithms",
-        path: "wiki/structures-algorithms",
-        routeBasePath: "structures-algorithms",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "computer-composition",
-        path: "wiki/computer-composition",
-        routeBasePath: "computer-composition",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "computer-network",
-        path: "wiki/computer-network",
-        routeBasePath: "computer-network",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "operating-system",
-        path: "wiki/operating-system",
-        routeBasePath: "operating-system",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "database-system",
-        path: "wiki/database-system",
-        routeBasePath: "database-system",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "computer-security",
-        path: "wiki/computer-security",
-        routeBasePath: "computer-security",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "software-engineering",
-        path: "wiki/software-engineering",
-        routeBasePath: "software-engineering",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "compilation-principle",
-        path: "wiki/compilation-principle",
-        routeBasePath: "compilation-principle",
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/Sh1n3zZ/LeSunCloud_Docs/edit/main/",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        breadcrumbs: false,
-      },
-    ],
 
-    "docusaurus-plugin-umami",
-  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // announcementBar: {
-      //   id: 'support_us',
-      //   content:
-      //     'Always For Freedom. The site by 7Wate.',
-      //   backgroundColor: '#fafbfc',
-      //   textColor: '#091E42',
-      //   isCloseable: false,
-      // },
-      metadata: [
-        {
-          name: "keywords",
-          content: "晞云, wiki, blog, c, c++, java, python, linux, 云计算",
-        },
-      ],
+      docs: {
+        sidebar: {
+          hideable: true
+        }
+      },
+      announcementBar: {
+        id: 'support_us',
+        content: '⭐️ 如果这个网站能帮助到你，欢迎给一个star支持作者  <a target="_blank" rel="noopener noreferrer" href="https://github.com/Messiahhh/blog">GitHub</a>',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      }, 
       navbar: {
-        title: "📚 晞 · Docs",
+        title: 'Akara的博客',
         hideOnScroll: true,
-        // logo: {
-        //   alt: 'Site Logo',
-        //   src: 'img/logo.svg',
-        //   srcDark: 'img/logo_dark.svg',
-        //   href: 'https://docusaurus.io/',
-        //   target: '_self',
-        //   width: 32,
-        //   height: 32,
-        // },
         items: [
           {
-            position: "right",
-            label: "👨🏻‍🎓 文档",
-            items: [
-              {
-                label: "基础入门",
-                to: "/getting-started",
-              },
-              {
-                label: "程序设计语言",
-                to: "/programming-language",
-              },
-              {
-                label: "数据结构与算法",
-                to: "/structures-algorithms",
-              },
-              {
-                label: "计算机组成",
-                to: "/computer-composition",
-              },
-              {
-                label: "计算机网络",
-                to: "/computer-network",
-              },
-              {
-                label: "操作系统",
-                to: "/operating-system",
-              },
-              {
-                label: "数据库系统",
-                to: "/database-system",
-              },
-              {
-                label: "计算机系统安全",
-                to: "/computer-security",
-              },
-              {
-                label: "软件工程",
-                to: "/software-engineering",
-              },       
-              {
-                label: "编译原理",
-                to: "/compilation-principle",
-              },
-            ],
+            type: 'search',
+            position: 'right',
+          },
+          {
+            type: 'doc',
+            docId: 'HTML',
+            position: 'right',
+            label: '正文',
+          },
+          {to: 'blog/面经', label: '面经', position: 'right'},
+          {
+            href: 'https://github.com/messiahhh/blog',
+            label: 'GitHub',
+            position: 'right',
           },
         ],
-      },
-      algolia: {
-        apiKey: "b85039aa93c6387b97f0f14cebe76bea",
-        appId: "LMJA03N982",
-        indexName: "DocsSearch",
-      },
-      umami: {
-        websiteid: "7efcd733-c232-43db-9f17-10a00c53b152",
-        src: "https://umami.7wate.org/umami.js",
-      },
-      footer: {
-        style: "dark",
-        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://lesun.cloud">晞云</a> All Rights Reserved.<br><a href="https://beian.miit.gov.cn/">粤ICP备2023028108号-1</a>`,
-      },
-      prism: {
+      }, 
+      prism: { 
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        defaultLanguage: "markdown",
-        additionalLanguages: ["java", "git","nginx","http"],
+        defaultLanguage: 'javascript',
+        additionalLanguages: ['rust'],
+      }, 
+      colorMode: {
+        respectPrefersColorScheme: true
       },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'BWG0DEIDEP',
+    
+        // Public API key: it is safe to commit it
+        apiKey: 'd3f9fff64e1510e7299229fb32996203',
+    
+        indexName: 'messiahhh',
+      }
     }),
 };
 
