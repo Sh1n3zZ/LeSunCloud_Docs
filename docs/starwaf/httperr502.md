@@ -4,7 +4,7 @@
 顾名思义，收到无效响应，即请求被上游服务器拦截  
 在使用我们的 CDN 出现这种情况时，一般是由于您的服务器防火墙将我们的节点拦截从而导致我们的节点无法拉取您的服务器（即源站）网站上的内容，导致节点无法给用户提供内容，故返回 **502 Bad Gateway** 报错  
 当出现此报错时，您看到的界面应是这样的
-![https://zzcdn.uerr.cn/cloudreve/uploads/2023/05/01/Vra9DDW1_QQ%E6%88%AA%E5%9B%BE20230501204159.png](502 Bad Gateway)
+![502 Bad Gateway](https://zzcdn.uerr.cn/cloudreve/uploads/2023/05/01/Vra9DDW1_QQ%E6%88%AA%E5%9B%BE20230501204159.png)
 
 ## 我应如何解决？
 因为此报错出现的原因为 **请求被上游服务器拦截** ，所以您应当检查您的源站 **防火墙设置** 是否出现了问题  
@@ -25,9 +25,9 @@ sudo ufw disable
 **如您是 宝塔面板 用户，请执行如下操作：**
 1.在首页点击 **软件管理**
 2.在 **软件管理** 中选择 **你已经安装的系统防火墙软件**
-![https://zzcdn.uerr.cn/cloudreve/uploads/2023/05/01/oC90YbKF_ScreenShot1_Step1.png](打开宝塔面板中的防火墙软件)
+![打开宝塔面板中的防火墙软件](https://zzcdn.uerr.cn/cloudreve/uploads/2023/05/01/oC90YbKF_ScreenShot1_Step1.png)
 3.在 **软件 - 管理** 中选择 **关闭防火墙**
-![https://zzcdn.uerr.cn/cloudreve/uploads/2023/05/01/WPoqTSr7_QQ%E6%88%AA%E5%9B%BE20230501215153.png](关闭防火墙)
+![关闭防火墙](https://zzcdn.uerr.cn/cloudreve/uploads/2023/05/01/WPoqTSr7_QQ%E6%88%AA%E5%9B%BE20230501215153.png)
 
 ### 给我们的 CDN 内容分发节点加白
 考虑到部分站长可能 **不希望自己的源站暴露** ，因此我们建议这类站长
