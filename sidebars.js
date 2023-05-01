@@ -18,7 +18,6 @@ const sidebars = {
     
     // "browser",
     "Start",
-    "css",
 
     // "Star · WAF",
     {
