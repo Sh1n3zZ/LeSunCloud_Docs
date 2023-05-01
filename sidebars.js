@@ -30,7 +30,8 @@ const sidebars = {
       },
       items: [
         'starwaf/basic',
-        'starwaf/httperr502'
+        'starwaf/httperr502',
+        'starwaf/httperr504'
       ],
     },
 
