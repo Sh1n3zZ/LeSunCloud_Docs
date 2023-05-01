@@ -9,42 +9,25 @@ sidebarDepth: 4
 
 ### 相关网站
 
-[晞云云计算 - 云产品购买](https://lesun.cloud/)
-[晞 · Docs - 晞云产品文档](https://docs.lesun.cloud/)
-[Sh1n3zZ の 小屋 - 网站信息变动/更新日志](https://blog.shinezz.cc/)
+##### [晞云云计算 - 云产品购买](https://lesun.cloud/)  
+##### [晞 · Docs - 晞云产品文档](https://docs.lesun.cloud/)  
+##### [Sh1n3zZ の 小屋 - 网站信息变动/更新日志](https://blog.shinezz.cc/)
 
-### 资源预加载
+### 我们的项目
 
-在解析HTML前先获取到HTML内部的外链地址并放入请求队列当中，因此不必等到HTML解析到某行代码的时候再去加载资源。
+:::tip 非本站运营内容提示
+以下内容由 [GitHub](https://github.com/) 托管，非本站（本公司）运营，您的信息将会由对应站点处理，使用以下内容请阅读对应站点的条款，在非本站页造成的任何后果本站不负任何责任
+:::
 
-##### preload
+##### [Draw-Lots-Tools](https://github.com/Sh1n3zZ/Draw-Lots-Tools)  
+##### [PetHouse](https://github.com/Sh1n3zZ/PetHouse)  
+##### [nonebot_plugin_ping](https://github.com/Sh1n3zZ/nonebot_plugin_ping)  
 
-预加载资源时进入请求队列的先后顺序是根据资源在代码中出现的顺序决定的，我们也可以使用`preload`来手动调整资源的预加载顺序。
+## 使用本站产品须知
 
-``` html
-<body>
-    <script src="a.js"></script>
-    <script src="b.js"></script>
-    <script src="c.js"></script>
-</body>
-```
-
-对于以上文档的脚本资源的加载顺序是`a、b、c`，如果想要在不改变脚本执行顺序的同时让`c.js`优先于`a.js`进入请求队列，我们可以这样改。此时脚本资源的加载顺序是`c、a、b`
-
-``` html
-<body>
-    <link rel="preload" as="script" href="c.js">
-    <script src="a.js"></script>
-    <script src="b.js"></script>
-    <script src="c.js"></script>
-</body>
-```
-
-### 解析HTML
-
-解析HTML的时候需要注意JavaScript**脚本的执行会阻塞HTML的解析**，因此当解析HTML解析到一行外链脚本的时候，我们需要等待**脚本的加载**、再等待**脚本的执行**，才能继续后续HTML的解析。
-
-
+:::caution 使用本站产品须知
+在您使用本站产品前（在本站注册账号后）即视为您同意本站的 [用户服务条款](https://lesun.cloud/newsDetails/1.html) ，您应当为您的操作负责  
+因人力资源、时效性等相关问题，在使用本站产品的过程中遇到问题时，请先 **自行通过 Google Bing Baidu Yahoo 等搜索引擎检索内容无果后再向我们寻求帮助** ，在互联网上 **能够直接检索到内容的帮助需求在用户态度恶劣的情况下我们有权不予处理** ，因此在询问问题前请您了解相关内容
 
 ##### async and defer
 
